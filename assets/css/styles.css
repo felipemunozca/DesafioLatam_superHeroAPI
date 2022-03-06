@@ -14,3 +14,11 @@ body {
 .imagen-formulario > img {
     width: 100%;
 }
+
+.imagen-section > .container > img {
+    width: 70%;
+}
+
+#imagenTarjeta > img {
+    width: 100%;
+}

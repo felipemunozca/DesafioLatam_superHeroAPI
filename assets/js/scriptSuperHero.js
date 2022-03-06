@@ -20,9 +20,9 @@ btnBuscarHero.addEventListener('click', (event) => {
             url: `https://www.superheroapi.com/api.php/3525635500807579/${inputNumeroHero.value}`,
             dataType: "json",
             success: function (heroe) {
-                console.log(heroe.name);
-                console.log(heroe.connections["group-affiliation"]);
-                console.log(heroe.biography.publisher);
+
+                //llamo a mis funciones
+                crearTarjeta(heroe);
             }
         });
 
@@ -31,3 +31,35 @@ btnBuscarHero.addEventListener('click', (event) => {
     };
 
 });
+
+
+const crearTarjeta = (heroeRecibido) => {
+    
+    //informacion que estoy solicitando a la API.
+    let imagen = heroeRecibido.image.url;
+    let nombre = heroeRecibido.name;
+    let conexiones = heroeRecibido.connections["group-affiliation"]; //esta es la forma en que se declaran los nombres de objetos con guion.
+    let publicado = heroeRecibido.biography.publisher;
+    let ocupacion = heroeRecibido.work.occupation;
+    let primeraAparacion = heroeRecibido.biography["first-appearance"];
+    let altura = heroeRecibido.appearance.height;
+    let peso = heroeRecibido.appearance.weight;
+    let alianza = heroeRecibido.biography.aliases;
+
+    //recibo la imagen desde la API a mi html.
+    $('#imagenTarjeta').html(`
+        <img src="${imagen}">
+    `);
+    
+    //agrego la informacion que recibi de la API y la declaro en el card.
+    $('#cuerpoTarjeta').html(`
+        <h5 class="card-title">Nombre: ${nombre}</h5>
+        <p class="card-text">Conexiones: ${conexiones}</p>
+        <p class="card-text">Publicado por: ${publicado}</p>
+        <p class="card-text">Ocupación: ${ocupacion}</p>
+        <p class="card-text">Primera Aparación: ${primeraAparacion}</p>
+        <p class="card-text">Altura: ${altura}</p>
+        <p class="card-text">Peso: ${peso}</p>
+        <p class="card-text">Alianzas: ${alianza}</p>
+    `);
+};
