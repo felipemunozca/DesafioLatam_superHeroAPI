@@ -1,5 +1,9 @@
 body {
-    background: url('../img/fondo2.jpg') center top;
+    background: url('../img/fondo2.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    margin: 0;
+    height: 100vh;
 }
 
 .navbar-brand > img {
@@ -21,4 +25,8 @@ body {
 
 #imagenTarjeta > img {
     width: 100%;
+}
+
+.superheroe-section {
+    display: none;
 }
