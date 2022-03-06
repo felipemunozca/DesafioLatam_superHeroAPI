@@ -10,7 +10,59 @@
     <title>Super Hero API</title>
 </head>
 <body>
-    
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand text-white" href="#"><img src="assets/img/sh2.jpg" alt=""> SuperHero</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="formulario-section mt-3 mb-3 ml-3 mr-3">
+        <div class="container borde-section">
+            <div class="row pt-3 pb-3">
+                <div class="col-md-6 imagen-formulario">
+                    <img src="assets/img/sh1.jpg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <h2>Encuentra tu SuperHero</h2>
+                        <div class="form-group">
+                            <label>Ingresa el número del SuperHero a buscar</label>
+                            <input id="inputNumeroHero" type="text" class="form-control">
+                        </div>
+                        <button id="btnBuscarHero" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="superheroe-section mt-3 mb-3 ml-3 mr-3">
+        <div class="container borde-section">
+            <div class="row"> 
+                <div class="col-12 col-md-7 mb-3 mt-2">
+
+                    <h4 class="text-center">SuperHero Encontrado</h4>
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-4" id="imagenTarjeta">
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body" id="cuerpoTarjeta">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 

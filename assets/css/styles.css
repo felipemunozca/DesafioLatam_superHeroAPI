@@ -1,0 +1,16 @@
+body {
+    background: url('../img/fondo2.jpg') center top;
+}
+
+.navbar-brand > img {
+    width: 2rem;
+}
+
+.borde-section {
+    border: 3px solid rgb(0, 0, 0);
+    background-color: #fff;
+}
+
+.imagen-formulario > img {
+    width: 100%;
+}
