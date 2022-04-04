@@ -11,26 +11,32 @@ btnBuscarHero.addEventListener('click', (event) => {
     //expresion regular para solo permitir numeros.
     let soloNumeros = new RegExp('^[0-9]{1,9}$');
 
-    //condicion que compara si lo que escribo en el input es un numero o no. Si es un numero ejecuta el ajax(). En caso contrario, dispara una alerta con un mensaje.
-    if (soloNumeros.test(inputNumeroHero.value)) {
-
-        $.ajax({
-            type: "get",
-            //url de la API. + .php + token + id recogido desde el input.
-            url: `https://www.superheroapi.com/api.php/3525635500807579/${inputNumeroHero.value}`,
-            dataType: "json",
-            success: function (heroe) {
-
-                //llamo a mis funciones
-                crearTarjeta(heroe);
-                crearGrafico(heroe);
-                limpiarInput();
-                $('.superheroe-section').show(1000);
-            }
-        });
-
+    if (inputNumeroHero.value >= 733) {
+        alert('¡¡Error!! La busqueda de superheroes no puede sobrepasar el numero 732.')
     } else {
-        alert('¡¡Error!! Solo se pueden ingresar numeros.');
+
+        //condicion que compara si lo que escribo en el input es un numero o no. Si es un numero ejecuta el ajax(). En caso contrario, dispara una alerta con un mensaje.
+        if (soloNumeros.test(inputNumeroHero.value)) {
+
+            $.ajax({
+                type: "get",
+                //url de la API. + .php + token + id recogido desde el input.
+                url: `https://www.superheroapi.com/api.php/3525635500807579/${inputNumeroHero.value}`,
+                dataType: "json",
+                success: function (heroe) {
+
+                    //llamo a mis funciones
+                    crearTarjeta(heroe);
+                    crearGrafico(heroe);
+                    limpiarInput();
+                    $('.superheroe-section').show(1000);
+                }
+            });
+
+        } else {
+            alert('¡¡Error!! Solo se pueden ingresar numeros.');
+        };
+    
     };
 
 });
