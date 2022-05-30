@@ -31,3 +31,7 @@ _3. Una vez ingresado el número del héroe a buscar y después de realizar un c
 * 3.6 - Utilizar ciclos y métodos para arreglos u objetos que permitan recorrer, ordenar y mostrar la información.
 * 3.7 - Emplear la librería de gráficos CanvasJS, para mostrar dinámicamente información específica de cada superhéroe.
 * 3.8 - Implementar estructuras condicionales para generar alertas cuando existan errores en la búsqueda.
+
+
+# Live Demo
+Proyecto corriendo en GitHub Pages:  [felipemunozca.github.io/Desafio_superHeroAPI/](https://felipemunozca.github.io/Desafio_superHeroAPI/)
